@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 # Install dos2unix utility
-RUN apt-get update && apt-get install -y dos2unix
+# RUN apt-get update && apt-get install -y dos2unix
 
 # Set the working directory
 WORKDIR /app
@@ -10,7 +10,7 @@ WORKDIR /app
 COPY calculator.sh /app/calculator.sh
 
 # Convert line endings to Unix-style
-RUN dos2unix /app/calculator.sh
+# RUN dos2unix /app/calculator.sh
 
 # Ensure the script has execute permissions
 RUN chmod +x /app/calculator.sh
