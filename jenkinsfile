@@ -4,7 +4,7 @@ pipeline {
       githubPush() 
    }
     environment {
-        DOCKER_IMAGE_NAME = 'calculator'
+        DOCKER_IMAGE_NAME = 'calculator2'
         GITHUB_REPO_URL = 'https://github.com/Ashutosh-Jadhav/calculator.git'
     }
 
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image
-                    docker.build("${DOCKER_IMAGE_NAME}")
+                    docker.build("${DOCKER_IMAGE_NAME}","./calculator")
                 }
             }
         }
